@@ -1,19 +1,29 @@
 name: Converter CI
-on:
 
-push:
-branches: [ "main" ]
+on:
+  push:
+    branches:
+      - "main"
+
 jobs:
-build:
-runs-on: ubuntu-latest
-steps:
-- name: Checkout repository
-uses: actions/checkout@v4
-- name: Setup Node.js
-uses: actions/setup-node@v4
-with:
-node-version: 18 # Use the Node.js version of your choice
-- name: Install dependencies
-run: npm install
-- name: Run Jest tests
-run: npm test
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Setup Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18 # Specify the Node.js version
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Run Jest tests
+      - name: Run Jest tests
+        run: npm test
