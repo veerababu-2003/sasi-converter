@@ -1,0 +1,24 @@
+{
+  "name": "sasi-converter",
+  "version": "1.0.0",
+  "description": "The small project for the changing currency INR to USD",
+  "homepage": "https://github.com/veerababu-2003/sasi-converter#readme",
+  "bugs": {
+    "url": "https://github.com/veerababu-2003/sasi-converter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veerababu-2003/sasi-converter.git"
+  },
+  "license": "ISC",
+  "author": "Veerababu",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
